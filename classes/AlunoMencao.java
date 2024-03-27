@@ -24,8 +24,8 @@ public class AlunoMencao {
         if(media>=7){
             return "Aprovado";
         }
-        else if(media<=5){
-            return "Reprovado";
+        else if(media>=5.1&&media<=6.9){
+            return "Recuperação";
         }
         else{
             return "Reprovado";
