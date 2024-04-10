@@ -2,9 +2,17 @@ package classes;
 
 public class CarroNovo {
     
-    public double custoFabrica;
+    private double custoFabrica;
 
-    public CarroNovo(double custoFabrica){
+    public CarroNovo(){
+
+    }
+
+    public double getCustoFabrica(){
+        return this.custoFabrica;
+    }
+
+    public void setCustoFabrica(double custoFabrica){
         this.custoFabrica = custoFabrica;
     }
 
