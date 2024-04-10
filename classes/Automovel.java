@@ -1,14 +1,29 @@
 package classes;
 
 public class Automovel {
-    public double distanciaPerc;
-    public double combGasto;
+    private double distanciaPerc;
+    private double combGasto;
 
-    public Automovel(double distanciaPerc, double combGasto){
-        this.distanciaPerc = distanciaPerc;
-        this.combGasto = combGasto;
+    public Automovel(){
     }
     public double mediaConsumo(){
         return distanciaPerc / combGasto;
     }
+
+    public double getDistancia(){
+        return  distanciaPerc;
+    }
+    public void setDistancia(double distanciaPerc){
+        this.distanciaPerc = distanciaPerc;
+    }
+
+    public double getCombustivel(){
+        return combGasto;
+    }
+
+    public void setCombustivel(double combGasto){
+        this.combGasto = combGasto;
+    }
+
+    
 }
