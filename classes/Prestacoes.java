@@ -2,13 +2,19 @@ package classes;
 
 public class Prestacoes{
 
-    public double vlrCompra;
+    private double vlrCompra;
 
-    public Prestacoes(double vlrCompra){
+    public Prestacoes(){
+
+    }
+
+    public double getVlrCompra() {
+        return vlrCompra;
+    }
+
+    public void setVlrCompra(double vlrCompra) {
         this.vlrCompra = vlrCompra;
     }
 
-    public double vlrPrestacoes(){
-        return vlrCompra / 5;
-    }
+    
 }
