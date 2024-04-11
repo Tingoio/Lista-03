@@ -3,12 +3,13 @@ import classes.Intervalo;
 public class Exercicio09 {
     public static void executar(){
 
-        Intervalo objIntervalo = new Intervalo();
+        int tamanho = Prompt.lerInteiro("Digite o tamanho do vetor: ");
+        Intervalo objIntervalo = new Intervalo(tamanho);
 
-        for (int i = 0; i < 80; i++) {
-            objIntervalo.vetor[i] = Prompt.lerDecimal("Preencha o vetor: ");
+        for (int i = 0; i < objIntervalo.getTamanho(); i++) {
+            objIntervalo.getVetor()[i] = Prompt.lerInteiro("Preencha o vetor:");
         }
-
-        Prompt.imprimir("Número dentro do intervalo de 10 a 150: "+objIntervalo.contador);
+        
+        Prompt.imprimir("Números dentro do intervalo de 10 a 150: "+objIntervalo.contarNumeros());
     }
 }
