@@ -1,11 +1,18 @@
 package classes;
 public class MaiorIdade {
     
-    public int idade;
+    private int idade;
 
-    public MaiorIdade(int idade){
-        this.idade = idade;
+    public MaiorIdade(){
     }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }  
 
     public String defineIdade(){
         if(idade>=18){
@@ -15,4 +22,5 @@ public class MaiorIdade {
             return "Menor de idade.";
         }
     }
+
 }
