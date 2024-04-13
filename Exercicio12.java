@@ -1,23 +1,24 @@
-import classes.CarangoVelho;
+import classes.CarroCarango;
 
 public class Exercicio12 {
     public static void executar(){
 
         int carros2000 = 0, carrosTot = 0;
-
+        
         char opcao;
         do{
-            int anoCarro = Prompt.lerInteiro("Digite o ano em que o carro foi fabricado: ");
+            CarroCarango carro  = new CarroCarango();
+
+            carro.setAnoCarro(Prompt.lerInteiro("Digite o ano em que o carro foi fabricado: "));;
             double valorOriginal = Prompt.lerDecimal("Digite o valor original do a ser pago: ");
 
-            CarangoVelho carro = new CarangoVelho(anoCarro);
 
-            Prompt.imprimir("Desconto: " + (carro.calcDesconto() * 100) + "%");
+            Prompt.imprimir("Desconto: " + String.format("%.2f", carro.calcDesconto() * 100) + "%");
 
             Double valorComDesconto = valorOriginal - (valorOriginal * carro.calcDesconto());
             Prompt.imprimir("Valor a ser pago pelo cliente: R$" + valorComDesconto);
 
-            if (anoCarro <= 2000) {
+            if (carro.getAnoCarro() <= 2000) {
                 carros2000++;
             }
             carrosTot++;
