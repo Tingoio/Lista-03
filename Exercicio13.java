@@ -7,23 +7,15 @@ public class Exercicio13 {
         int aptos = 0, naoAptos = 0;
 
         for(int i = 0; i < qtdPessoas; i++){
-            String nome = Prompt.lerLinha("Digite o nome da pessoa: ");
-            char sexo = Prompt.lerCaractere("Digite o sexo da pessoa (M/F): ");
-            int idade = Prompt.lerInteiro("Digite a idade da pessoa: ");
-            char saude = Prompt.lerCaractere("A pessoa tem aglum problema de saúde crônico (S/N)? ");
+            PessoaApta pessoa = new PessoaApta();
 
-            PessoaApta objPessoaApta = new PessoaApta(nome, sexo, idade, saude);
+            pessoa.setNome(Prompt.lerLinha("Digite o nome da pessoa: "));
+            pessoa.setSexo(Prompt.lerCaractere("Digite o sexo da pessoa (M/F): "));;
+            pessoa.setIdade(Prompt.lerInteiro("Digite a idade da pessoa: "));
+            pessoa.setSaude(Prompt.lerCaractere("A pessoa tem aglum problema de saúde crônico (S/N)? "));;
 
-            if(sexo=='m'||sexo=='M'){
-                if(idade>=18){
-                    if(saude=='s'||saude=='S'){
-                        aptos++;
-                    }else{
-                        naoAptos++;
-                    }
-                }else{
-                    naoAptos++;
-                }
+            if(pessoa.validarPessoa(pessoa.getSexo(), pessoa.getIdade(), pessoa.getSaude())==1){
+                aptos++;
             }else{
                 naoAptos++;
             }
