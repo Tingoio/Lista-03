@@ -3,7 +3,7 @@ import classes.Funcionario;
 public class Exercicio16 {
     public static void executar(){
         
-        Funcionario[] funcionarios = new Funcionario[5];
+        Funcionario[] funcionarios = new Funcionario[584];
 
         for (int i = 0; i < funcionarios.length; i++) {
             
